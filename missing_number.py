@@ -10,3 +10,18 @@ If the array contains the numbers: [1, 2, 3, 5, 6]
 Then the missing number is 4.
 
 """
+Example Code:-
+def find_missing_number(arr, n):
+    expected_sum = n * (n + 1) // 2
+    actual_sum = sum(arr)
+    return expected_sum - actual_sum
+
+n = int(input("Enter the total number of elements (n): "))
+arr = list(map(int, input("Enter the numbers separated by space: ").split()))
+
+print("Missing number:", find_missing_number(arr, n))
+
+Example Output:-
+Enter the total number of elements (n): 6
+Enter the numbers separated by space: 1 2 3 5 6
+Missing number: 4
