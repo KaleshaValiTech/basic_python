@@ -3,6 +3,9 @@
 ## 1. **Sum of Even Numbers**
 Write a Python program that calculates the sum of all even numbers between 1 and 100.
 
+**Code:-**
+print(sum(i for i in range(1, 101) if i % 2 == 0))
+
 ### Example Input:
 No input required.
 
@@ -13,6 +16,12 @@ No input required.
 
 ## 2. **Reverse a String**
 Write a Python function that takes a string as input and returns the string reversed.
+**Code:-**
+def reverse_string():
+    s = input("Enter a string: ")
+    print(s[::-1])
+
+reverse_string()
 
 ### Example Input:
 `"hello"`
@@ -24,6 +33,15 @@ Write a Python function that takes a string as input and returns the string reve
 
 ## 3. **Factorial of a Number**
 Write a Python program that calculates the factorial of a number (n!). For example, the factorial of 5 is `5 * 4 * 3 * 2 * 1 = 120`.
+**Code:-**
+def factorial():
+    n = int(input("Enter a number: "))
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    print(result)
+
+factorial()
 
 ### Example Input:
 `5`
@@ -35,6 +53,19 @@ Write a Python program that calculates the factorial of a number (n!). For examp
 
 ## 4. **Check if a Number is Prime**
 Write a Python function that checks if a given number is prime.
+**Code:-**
+def is_prime():
+    n = int(input("Enter a number: "))
+    if n < 2:
+        print(False)
+        return
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            print(False)
+            return
+    print(True)
+
+is_prime()
 
 ### Example Input:
 `7`
@@ -46,6 +77,12 @@ Write a Python function that checks if a given number is prime.
 
 ## 5. **Count Vowels in a String**
 Write a Python program that counts the number of vowels (a, e, i, o, u) in a given string.
+**Code:-**
+def count_vowels():
+    s = input("Enter a string: ").lower()
+    print(sum(1 for c in s if c in "aeiou"))
+
+count_vowels()
 
 ### Example Input:
 `"programming"`
@@ -57,6 +94,15 @@ Write a Python program that counts the number of vowels (a, e, i, o, u) in a giv
 
 ## 6. **Fibonacci Series**
 Write a Python program that prints the Fibonacci series up to the nth number, where n is provided by the user.
+**Code:-**
+def fibonacci():
+    n = int(input("Enter a number: "))
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+fibonacci()
 
 ### Example Input:
 `5`
@@ -68,6 +114,12 @@ Write a Python program that prints the Fibonacci series up to the nth number, wh
 
 ## 7. **Find the Largest Number in a List**
 Write a Python program that finds and prints the largest number from a given list of integers.
+**Code:-**
+def find_largest():
+    nums = list(map(int, input("Enter numbers separated by space: ").split()))
+    print(max(nums))
+
+find_largest()
 
 ### Example Input:
 `[10, 30, 25, 60, 12]`
@@ -79,6 +131,12 @@ Write a Python program that finds and prints the largest number from a given lis
 
 ## 8. **Check Palindrome**
 Write a Python function that checks whether a given string is a palindrome (reads the same backward as forward).
+**Code:-**
+def is_palindrome():
+    s = input("Enter a string: ")
+    print(s == s[::-1])
+
+is_palindrome()
 
 ### Example Input:
 `"madam"`
@@ -90,6 +148,13 @@ Write a Python function that checks whether a given string is a palindrome (read
 
 ## 9. **Multiplication Table**
 Write a Python program that generates the multiplication table of a number up to 10.
+**Code:-**
+def multiplication_table():
+    n = int(input("Enter a number: "))
+    for i in range(1, 11):
+        print(f"{n} * {i} = {n * i}")
+
+multiplication_table()
 
 ### Example Input:
 `4`
@@ -113,6 +178,12 @@ Write a Python program that generates the multiplication table of a number up to
 
 ## 10. **Count Digits in a Number**
 Write a Python function that counts the number of digits in a given number.
+**Code:-**
+def count_digits():
+    n = input("Enter a number: ")
+    print(len(n))
+
+count_digits()
 
 ### Example Input:
 `12345`
@@ -124,6 +195,12 @@ Write a Python function that counts the number of digits in a given number.
 
 ## 11. **Sum of Digits**
 Write a Python program that calculates the sum of the digits in a number.
+**Code:-**
+def sum_of_digits():
+    n = input("Enter a number: ")
+    print(sum(int(digit) for digit in n))
+
+sum_of_digits()
 
 ### Example Input:
 `1234`
@@ -135,6 +212,12 @@ Write a Python program that calculates the sum of the digits in a number.
 
 ## 12. **Find the Second Largest Number**
 Write a Python function that finds the second-largest number in a list of numbers.
+**Code:-**
+def second_largest():
+    numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+    print(sorted(set(numbers))[-2])
+
+second_largest()
 
 ### Example Input:
 `[10, 20, 4, 45, 99]`
@@ -146,6 +229,12 @@ Write a Python function that finds the second-largest number in a list of number
 
 ## 13. **Convert Celsius to Fahrenheit**
 Write a Python program that converts a temperature in Celsius to Fahrenheit.
+**Code:-**
+def celsius_to_fahrenheit():
+    celsius = float(input("Enter temperature in Celsius: "))
+    print((celsius * 9/5) + 32)
+
+celsius_to_fahrenheit()
 
 ### Example Input:
 `25`
@@ -157,6 +246,12 @@ Write a Python program that converts a temperature in Celsius to Fahrenheit.
 
 ## 14. **Check if a Number is Armstrong**
 Write a Python function to check whether a number is an Armstrong number. An Armstrong number is one where the sum of the cubes of its digits equals the number itself (for a 3-digit number).
+**Code:-**
+def is_armstrong():
+    num = int(input("Enter a number: "))
+    print(num == sum(int(digit) ** 3 for digit in str(num)))
+
+is_armstrong()
 
 ### Example Input:
 `153`
@@ -168,6 +263,13 @@ Write a Python function to check whether a number is an Armstrong number. An Arm
 
 ## 15. **Find the Common Elements in Two Lists**
 Write a Python program that finds the common elements between two lists.
+**Code:-**
+def common_elements():
+    list1 = list(map(int, input("Enter first list: ").split()))
+    list2 = list(map(int, input("Enter second list: ").split()))
+    print(list(set(list1) & set(list2)))
+
+common_elements()
 
 ### Example Input:
 `[1, 2, 3, 4]`  
@@ -180,6 +282,12 @@ Write a Python program that finds the common elements between two lists.
 
 ## 16. **Remove Duplicates from a List**
 Write a Python program that removes all duplicate elements from a list and returns the list with unique elements only.
+**Code:-**
+def remove_duplicates():
+    nums = list(map(int, input("Enter list: ").split()))
+    print(list(set(nums)))
+
+remove_duplicates()
 
 ### Example Input:
 `[1, 2, 2, 3, 4, 4, 5]`
@@ -191,6 +299,8 @@ Write a Python program that removes all duplicate elements from a list and retur
 
 ## 17. **Sum of Odd Numbers**
 Write a Python program that calculates the sum of all odd numbers between 1 and 100.
+**Code:-**
+print(sum(range(1, 101, 2)))
 
 ### Example Input:
 No input required.
@@ -202,6 +312,11 @@ No input required.
 
 ## 18. **Check for Leap Year**
 Write a Python function that checks if a given year is a leap year.
+**Code:-**
+def is_leap_year(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+print(is_leap_year(int(input())))
 
 ### Example Input:
 `2024`
@@ -213,6 +328,8 @@ Write a Python function that checks if a given year is a leap year.
 
 ## 19. **Count Words in a Sentence**
 Write a Python program that counts the number of words in a given sentence.
+**Code:-**
+print(len(input().split()))
 
 ### Example Input:
 `"Python is fun"`
@@ -224,6 +341,8 @@ Write a Python program that counts the number of words in a given sentence.
 
 ## 20. **Create a Dictionary of Squares**
 Write a Python program that creates a dictionary where the keys are numbers from 1 to 10 and the values are the squares of those numbers.
+**Code:-**
+print({i: i * i for i in range(1, 11)})
 
 ### Example Output:
 ```python
